@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About - The Emotional Spoon</title>
+    <style>
+        /* Basic styling for messages (if any) */
+        .message {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .info { background-color: #d9edf7; color: #31708f; }
+        .success { background-color: #dff0d8; color: #3c763d; }
+        .warning { background-color: #fcf8e3; color: #8a6d3b; }
+        .error { background-color: #f2dede; color: #a94442; }
+
+        /* Basic styling for the page */
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        header { background: #333; color: #fff; padding: 1rem 0; text-align: center; margin: 0; }
+        .hero { background: url('path/to/hero-image.jpg') no-repeat center center/cover; height: 300px; }
+        .container { width: 80%; margin: auto; overflow: hidden; padding-top: 70px; }
+        .content { padding: 2rem 0; margin: 0; }
+        .content h2 { border-bottom: 2px solid #333; padding-bottom: 0.5rem; margin-top: 0; }
+        .content p { margin-bottom: 1.5rem; }
+        ul { list-style-type: none; padding: 0; }
+        ul li { margin-bottom: 0.5rem; }
+        form input[type="email"] { padding: 0.5rem; }
+        form button { padding: 0.5rem 1rem; background: #333; color: #fff; border: none; cursor: pointer; }
+
+        /* Navigation styling */
+        nav {
+            background: #fff; /* White background for the navigation bar */
+            color: #000; /* Black text for navigation links */
+            padding: 10px 0;
+            position: fixed; /* Fix the position of the navigation bar at the top */
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width */
+            border-bottom: 1px solid #ddd; /* Light border to separate nav from content */
+            z-index: 1000; /* Ensure it stays on top of other content */
+        }
+        nav a {
+            color: #000; /* Black text for navigation links */
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline; /* Underline effect on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a> | 
+        <a href="{% url 'about' %}">About</a> | 
+        <a href="{% url 'contact' %}">Contact</a> | 
+        <a href="{% url 'blog' %}">Blog</a> | 
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a> |
+            <a href="{% url 'register' %}">Register</a>
+        {% endif %}
+    </nav>
+    
+    <div class="hero"></div>
+
+    <div class="container">
+        <div class="content">
+            <h2>About Us</h2>
+            <h3>The Emotional Spoon</h3>
+            <p>Hailing from the vibrant music scene of Portland, Oregon, The Emotional Spoon is an indie band known for its unique blend of raw emotion and eclectic sounds. Formed by four distinct talents—enigmatic lead singer Luna Rivers, genre-bending guitarist Max “Strings” Thompson, rhythmically adventurous drummer Eli Foster, and quietly intense bassist Mia Nguyen—The Emotional Spoon offers a fresh and innovative musical experience.</p>
+            <p>Their debut album, *Stirred Emotions*, captures the essence of their creativity with tracks that seamlessly merge folk, electronic, and classic rock elements. Each song is a journey through personal highs and lows, delivered through Luna Rivers' haunting vocals and the band's masterful instrumental compositions.</p>
+            <p>Renowned for their interactive and immersive live performances, The Emotional Spoon invites audiences to share their own emotional stories, making every concert a unique and intimate experience. If you’re seeking music that resonates deeply and challenges conventional boundaries, The Emotional Spoon is here to stir your soul.</p>
+        </div>
+    </div>
+</body>
+</html>
