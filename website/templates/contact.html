@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact - The Emotional Spoon</title>
+    <style>
+        /* Basic styling for messages (if any) */
+        .message {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .info { background-color: #d9edf7; color: #31708f; }
+        .success { background-color: #dff0d8; color: #3c763d; }
+        .warning { background-color: #fcf8e3; color: #8a6d3b; }
+        .error { background-color: #f2dede; color: #a94442; }
+
+        /* Basic styling for the page */
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        header { background: #333; color: #fff; padding: 1rem 0; text-align: center; margin: 0; }
+        .hero { background: url('path/to/hero-image.jpg') no-repeat center center/cover; height: 300px; }
+        .container { width: 80%; margin: auto; overflow: hidden; padding-top: 70px; }
+        .content { padding: 2rem 0; margin: 0; }
+        .content h2 { border-bottom: 2px solid #333; padding-bottom: 0.5rem; margin-top: 0; }
+        .content p { margin-bottom: 1.5rem; }
+        ul { list-style-type: none; padding: 0; }
+        ul li { margin-bottom: 0.5rem; }
+        form input[type="email"] { padding: 0.5rem; }
+        form button { padding: 0.5rem 1rem; background: #333; color: #fff; border: none; cursor: pointer; }
+
+        /* Navigation styling */
+        nav {
+            background: #fff; /* White background for the navigation bar */
+            color: #000; /* Black text for navigation links */
+            padding: 10px 0;
+            position: fixed; /* Fix the position of the navigation bar at the top */
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width */
+            border-bottom: 1px solid #ddd; /* Light border to separate nav from content */
+            z-index: 1000; /* Ensure it stays on top of other content */
+        }
+        nav a {
+            color: #000; /* Black text for navigation links */
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline; /* Underline effect on hover */
+        }
+
+        /* Contact page specific styling */
+        .contact-info p {
+            margin-bottom: 20px; /* Adjust spacing as needed */
+        }
+        .contact-info strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-info a {
+            color: #007bff; /* Blue color for links */
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline; /* Underline effect on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a> | 
+        <a href="{% url 'about' %}">About</a> | 
+        <a href="{% url 'contact' %}">Contact</a> | 
+        <a href="{% url 'blog' %}">Blog</a> | 
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a> |
+            <a href="{% url 'register' %}">Register</a>
+        {% endif %}
+    </nav>
+
+    <div class="container">
+        <div class="content contact-info">
+            <h2>Contact Us</h2>
+            <p><strong>Booking Inquiries:</strong><br>
+            bookings@theemotionalspoonband.com</p>
+
+            <p><strong>Press and Media:</strong><br>
+            press@theemotionalspoonband.com</p>
+
+            <p><strong>Fan Mail and General Questions:</strong><br>
+            info@theemotionalspoonband.com</p>
+
+            <p><strong>Social Media:</strong><br>
+            Facebook: <a href="http://facebook.com/theemotionalspoonband" target="_blank">facebook.com/theemotionalspoonband</a><br>
+            Instagram: <a href="http://instagram.com/theemotionalspoonband" target="_blank">instagram.com/theemotionalspoonband</a><br>
+            Twitter: <a href="http://twitter.com/emotionalspoon" target="_blank">twitter.com/emotionalspoon</a></p>
+
+            <p><strong>Mailing Address:</strong><br>
+            The Emotional Spoon<br>
+            123 Melody Lane<br>
+            Portland, OR 97205<br>
+            USA</p>
+
+            <p><strong>Phone:</strong><br>
+            (503) 555-0198</p>
+        </div>
+    </div>
+</body>
+</html>
