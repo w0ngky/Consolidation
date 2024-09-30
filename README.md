@@ -1,7 +1,5 @@
-# Project Title
 
 ## Installation
 
-1. Clone the repository:
-   git clone <url>
-   cd project-directory
+1. Clone the repository: 
+   git clone https://github.com/w0ngky/Consolidation
