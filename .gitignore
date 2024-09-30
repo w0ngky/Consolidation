@@ -1,8 +1,23 @@
+<<<<<<< HEAD
 venv/
+=======
+>>>>>>> b4b3f73f853063f6cd6ba158e3de39ed08ac864b
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+<<<<<<< HEAD
 .DS_Store
 *.sqlite3
 .env
+=======
+.env
+.venv/
+venv/
+env/
+.DS_Store
+.idea/
+.vscode/
+db.sqlite3
+/staticfiles/
+>>>>>>> b4b3f73f853063f6cd6ba158e3de39ed08ac864b
