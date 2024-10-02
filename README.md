@@ -1,10 +1,11 @@
 # Project Title
 
-A brief description of your project and what it does.
+A fully functional website for a band built using Django. It features a homepage showcasing the band’s latest news, an about section, a contact page, a blog for posts, and user authentication for fans to log in and register.
 
 ## Table of Contents
 
 - [Installation](#installation)
+- [Running the Project with Docker](#running-the-project-with-docker)
 - [Usage](#usage)
 - [Credits](#credits)
 
@@ -14,7 +15,7 @@ A brief description of your project and what it does.
    git clone https://github.com/w0ngky/Consolidation/
 
 2. Navigate to the project directory:
-    cd ebookstore
+    cd Consolidation
 
 3. Set up a virtual environment:
     python -m venv venv
@@ -24,6 +25,22 @@ A brief description of your project and what it does.
 
 5. Install the required packages:
     pip install -r requirements.txt
+
+## Running the Project with Docker
+
+1. Ensure you have Docker installed.
+
+2. Clone the repository:
+    git clone https://github.com/w0ngky/Consolidation/
+    cd Consolidation
+
+3. Build the Docker image:
+    docker build -t band-website .
+
+4. Run the Docker container:
+    docker run -p 8000:8000 band-website
+
+5. Open your web browser and navigate to http://127.0.0.1:8000/ to access the website.
 
 ## Usage
 
