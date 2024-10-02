@@ -32,15 +32,17 @@ A fully functional website for a band built using Django. It features a homepage
 
 2. Clone the repository:
     git clone https://github.com/w0ngky/Consolidation/
+
+3. Then navigate to the project's directory:
     cd Consolidation
 
-3. Build the Docker image:
+4. Build the Docker image:
     docker build -t band-website .
 
-4. Run the Docker container:
+5. Run the Docker container:
     docker run -p 8000:8000 band-website
 
-5. Open your web browser and navigate to http://127.0.0.1:8000/ to access the website.
+6. Open your web browser and navigate to http://127.0.0.1:8000/ to access the website.
 
 ## Usage
 
